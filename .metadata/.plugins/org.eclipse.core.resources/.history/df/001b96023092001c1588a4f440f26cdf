@@ -1,0 +1,124 @@
+/**
+ * 
+ */
+package letuan_19431791;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Panel;
+import java.awt.event.ActionListener;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.border.TitledBorder;
+
+/**
+ * @author Student LeTuan
+ *
+ */
+public class GiaiPhuongTrinhBac2 extends JFrame implements ActionListener{
+	
+	private JTextField txtNhapA;
+	private JTextField txtNhapB;
+	private JTextField txtNhapC;
+	private JTextField txtKetQua;
+	public GiaiPhuongTrinhBac2() {
+		this.setTitle("^-^");
+		this.setSize(500, 400);
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		Panel p = new Panel();
+		p.setLayout(null);
+		
+		//top title
+		JLabel lblTitle = new JLabel("GIẢI PHƯƠNG TRÌNH BẬC HAI");
+		lblTitle.setSize(500, 50);
+		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);//Center text
+		lblTitle.setOpaque(true);
+		lblTitle.setBackground(Color.CYAN);
+		lblTitle.setFont(new Font("Helvetica", Font.BOLD, 20));
+		
+		//panel main
+		JPanel pMain = new JPanel();
+		pMain.setSize(500, 250);
+		pMain.setLayout(null);
+		//pMain.setBackground(Color.green);
+		
+		JLabel lblNhapA = new JLabel("Nhập a: ");
+		lblNhapA.setBounds(40, 70, 50, 30);
+		
+		txtNhapA = new JTextField();
+		txtNhapA.setBounds(100, 70, 350, 30);
+		
+		JLabel lblNhapB = new JLabel("Nhập b: ");
+		lblNhapB.setBounds(40, 110, 50, 30);
+		
+		txtNhapB = new JTextField();
+		txtNhapB.setBounds(100, 110, 350, 30);
+		
+		JLabel lblNhapC = new JLabel("Nhập c: ");
+		lblNhapC.setBounds(40, 150, 50, 30);
+		
+		txtNhapC = new JTextField();
+		txtNhapC.setBounds(100, 150, 350, 30);
+		
+		JLabel lblKetQua = new JLabel("Kết quả: ");
+		lblKetQua.setBounds(40, 190, 50, 30);
+		
+		txtKetQua = new JTextField();
+		txtKetQua.setBounds(100, 190, 350, 30);
+		txtKetQua.setEnabled(false);
+		
+		//add element into panel main
+		pMain.add(lblNhapA);
+		pMain.add(txtNhapA);
+		pMain.add(lblNhapB);
+		pMain.add(txtNhapB);
+		pMain.add(lblNhapC);
+		pMain.add(txtNhapC);
+		pMain.add(lblKetQua);
+		pMain.add(txtKetQua);
+		
+		//bottom controls
+		JPanel pControl = new JPanel();
+		pControl.setBounds(0, 280, 500, 80);
+		//pControl.setLayout();
+		//pControl.setBackground(Color.CYAN);
+		TitledBorder tb = BorderFactory.createTitledBorder("Chọn tác vụ:");
+		tb.setTitleJustification(TitledBorder.LEFT);
+		pControl.setBorder(tb);
+		
+		//create buttons control
+		JButton btnGiai = new JButton("Giải");
+		JButton btnXoaRong = new JButton("Xóa rỗng");
+		JButton btnThoat = new JButton("Thoát");
+		
+		//add element
+		pControl.add(btnGiai);
+		pControl.add(btnXoaRong);
+		pControl.add(btnThoat);
+		
+		//add component into panel
+		p.add(lblTitle);
+		p.add(pMain);
+		p.add(pControl);
+		
+		//add panel into frame
+		this.add(p);
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new GiaiPhuongTrinhBac2().setVisible(true);
+
+	}
+
+}
