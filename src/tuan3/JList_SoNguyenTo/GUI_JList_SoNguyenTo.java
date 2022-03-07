@@ -11,12 +11,12 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
-import javax.swing.ListModel;
+
 
 public class GUI_JList_SoNguyenTo extends JFrame implements ActionListener{
 	private JTextField txtInput;
 	private JButton btnGenerate;
-	private DefaultListModel listModel;
+	private DefaultListModel<Integer> listModel;
 
 	public GUI_JList_SoNguyenTo(String title) {
 		this.setTitle(title);
@@ -41,8 +41,8 @@ public class GUI_JList_SoNguyenTo extends JFrame implements ActionListener{
 		pnControl.add(btnGenerate);
 		
 		JPanel pnResult = new JPanel();
-		listModel = new DefaultListModel();
-		JList lstList = new JList(listModel);
+		listModel = new DefaultListModel<Integer>();
+		JList<Integer> lstList = new JList<Integer>(listModel);
 		pnResult.add(new JScrollPane(lstList));
 		
 		pnMain.add(pnControl);

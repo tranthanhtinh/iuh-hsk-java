@@ -1,17 +1,13 @@
 package tuan3.JTable_QLNhanVien;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import javax.management.modelmbean.ModelMBean;
 import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
 import javax.swing.DefaultCellEditor;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -103,7 +99,7 @@ public class GUI_JTable_QLNhanVien extends JFrame implements ActionListener, Mou
 		tableModel.setColumnIdentifiers(new String[] {"Mã NV", "Họ", "Tên", "Phái", "Tuổi", "Tiền Lương"});
 		
 		//Config cell table
-		JComboBox jComboBox = new JComboBox(new String[] {"Nam", "Nữ"});
+		JComboBox<String> jComboBox = new JComboBox<String>(new String[] {"Nam", "Nữ"});
 		DefaultCellEditor de = new DefaultCellEditor(jComboBox);
 		tableModel.addRow(new Object[] {"1111", "Nguyễn", "Hoàng", "Nam", "26", "4,500$"}) ;
 		tableModel.addRow(new Object[] {"2222", "Bá", "Long", "Nam", "25", "2,500$"}) ;
