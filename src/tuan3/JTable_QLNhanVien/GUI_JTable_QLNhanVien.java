@@ -88,7 +88,7 @@ public class GUI_JTable_QLNhanVien extends JFrame implements ActionListener, Mou
 		pnNameStaff.add(txtLastName);
 		pnMain.add(pnNameStaff);
 		
-		//====================INPUT AGE GENDER =================
+		//====================INPUT AGE & GENDER =================
 		JPanel pnAge_Gender = new JPanel();
 		
 		pnAge_Gender.add(new JLabel("Tuổi: "));
