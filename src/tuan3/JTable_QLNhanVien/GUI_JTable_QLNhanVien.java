@@ -95,14 +95,13 @@ public class GUI_JTable_QLNhanVien extends JFrame implements ActionListener, Mou
 		txtAge = new JTextField(45);
 		pnAge_Gender.add(txtAge);
 		
-		//Chưa add được button group
 		pnAge_Gender.add(new JLabel("Phái:"));
 		radFeMale = new JRadioButton("Nữ");
 		radMale = new JRadioButton("Nam");
 		btnGroup = new ButtonGroup();
 		btnGroup.add(radFeMale);
 		btnGroup.add(radMale);
-		
+
 		pnAge_Gender.add(radFeMale);
 		pnAge_Gender.add(radMale);
 		pnMain.add(pnAge_Gender);
@@ -152,6 +151,7 @@ public class GUI_JTable_QLNhanVien extends JFrame implements ActionListener, Mou
 		btnDel = new JButton("Xóa");
 		btnSave = new JButton("Lưu");
 		btnReloadData = new JButton("Tải lại");
+		
 		pnControlRight.add(btnAdd);
 		pnControlRight.add(btnEmtyFullInput);
 		pnControlRight.add(btnDel);
